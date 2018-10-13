@@ -1,0 +1,19 @@
+c:\users\rc05699\documents\visual studio 2015\Projects\PubsDatabase\PubsDatabase\bin\Debug\PubsDatabase.exe.config
+c:\users\rc05699\documents\visual studio 2015\Projects\PubsDatabase\PubsDatabase\bin\Debug\PubsDatabase.exe
+c:\users\rc05699\documents\visual studio 2015\Projects\PubsDatabase\PubsDatabase\bin\Debug\PubsDatabase.pdb
+c:\users\rc05699\documents\visual studio 2015\Projects\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.csprojResolveAssemblyReference.cache
+c:\users\rc05699\documents\visual studio 2015\Projects\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Form1.resources
+c:\users\rc05699\documents\visual studio 2015\Projects\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Properties.Resources.resources
+c:\users\rc05699\documents\visual studio 2015\Projects\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.csproj.GenerateResource.Cache
+c:\users\rc05699\documents\visual studio 2015\Projects\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.exe
+c:\users\rc05699\documents\visual studio 2015\Projects\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.pdb
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\bin\Debug\PubsDatabase.exe.config
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.exe
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.pdb
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\bin\Debug\PubsDatabase.exe
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\bin\Debug\PubsDatabase.pdb
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.csprojResolveAssemblyReference.cache
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Form1.resources
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Properties.Resources.resources
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.csproj.GenerateResource.Cache
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Form2.resources

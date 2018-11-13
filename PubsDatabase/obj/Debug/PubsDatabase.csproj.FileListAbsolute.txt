@@ -17,3 +17,15 @@ W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Form
 W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Properties.Resources.resources
 W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.csproj.GenerateResource.Cache
 W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Form2.resources
+W:\CSCI 3432 Group Project\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Form3.resources
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\bin\Debug\PubsDatabase.exe.config
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.exe
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.pdb
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\bin\Debug\PubsDatabase.exe
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\bin\Debug\PubsDatabase.pdb
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.csprojResolveAssemblyReference.cache
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Form1.resources
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Form2.resources
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Form3.resources
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.Properties.Resources.resources
+C:\Users\rc05699\Downloads\PubsDatabase\PubsDatabase\obj\Debug\PubsDatabase.csproj.GenerateResource.Cache

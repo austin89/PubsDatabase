@@ -26,7 +26,8 @@ namespace PubsDatabase.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CEIT2551204X035\\LOCAL;Initial Catalog=pubs;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=pubs.cg4pyjwjv4wq.us-east-1.rds.amazonaws.com;Initial Catalog=pubs;Pe" +
+            "rsist Security Info=True;User ID=pubsuser;Password=E5YWoYmQZ37THsy9")]
         public string pubsConnectionString {
             get {
                 return ((string)(this["pubsConnectionString"]));

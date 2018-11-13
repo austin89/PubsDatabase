@@ -13,7 +13,11 @@ namespace PubsDatabase
 {
     public partial class Form1 : Form
     {
-        SqlConnection c = new SqlConnection("Data Source=CEIT2551204X035\\LOCAL;Initial Catalog=pubs;Integrated Security=True");
+        //SqlConnection c = new SqlConnection("Data Source=CEIT2551204X035\\LOCAL;Initial Catalog=pubs;Integrated Security=True");
+
+
+        
+        SqlConnection c = new SqlConnection("Data Source = pubs.cg4pyjwjv4wq.us-east-1.rds.amazonaws.com; Initial Catalog = pubs; Persist Security Info=True;User ID = pubsuser; Password=E5YWoYmQZ37THsy9");
         public Form1()
         {
             InitializeComponent();
@@ -28,26 +32,97 @@ namespace PubsDatabase
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pubsDataSet.titles' table. You can move, or remove it, as needed.
-            this.titlesTableAdapter.Fill(this.pubsDataSet.titles);
-
-            // TODO: This line of code loads data into the 'pubsDataSet.stores' table. You can move, or remove it, as needed.
-            this.storesTableAdapter.Fill(this.pubsDataSet.stores);
-
-            // TODO: This line of code loads data into the 'pubsDataSet.publishers' table. You can move, or remove it, as needed.
-            this.publisherinfoTableAdapter.Fill(this.pubsDataSet.publisherinfo);
-
-            // TODO: This line of code loads data into the 'pubsDataSet.authors' table. You can move, or remove it, as needed.
-            this.authorsTableAdapter.Fill(this.pubsDataSet.authors);
+            // TODO: This line of code loads data into the 'pubsDataSet1.TITLE' table. You can move, or remove it, as needed.
+            this.tITLETableAdapter.Fill(this.pubsDataSet1.TITLE);
+            // TODO: This line of code loads data into the 'pubsDataSet1.STORE' table. You can move, or remove it, as needed.
+            this.sTORETableAdapter.Fill(this.pubsDataSet1.STORE);
+            // TODO: This line of code loads data into the 'pubsDataSet1.PUBLISHER' table. You can move, or remove it, as needed.
+            this.pUBLISHERTableAdapter.Fill(this.pubsDataSet1.PUBLISHER);
+            // TODO: This line of code loads data into the 'pubsDataSet1.AUTHOR' table. You can move, or remove it, as needed.
+            this.aUTHORTableAdapter.Fill(this.pubsDataSet1.AUTHOR); 
         }
 
 
         /// 
         /// Search author
         /// 
-        private void button1_Click(object sender, EventArgs e)
+        private void authorSubmit_Click(object sender, EventArgs e)
         {
-            c.Open();
+           // using (c)
+            //{
+                c.Open();
+                String aID = authorID.Text;
+                String aFname = authorFirstName.Text;
+                String aLname = authorLastName.Text;
+                String auPhone = authorPhoneNumber.Text;
+                String filter = "";
+
+                if (aID != "")
+                {
+                    filter = filter + "au_ID LIKE '" + aID + "%' AND ";
+                }
+
+                if (aFname != "")
+                {
+                    filter = filter + "first_name LIKE '" + aFname + "%' AND ";
+                }
+
+                if (aLname != "")
+                {
+                    filter = filter + "last_name LIKE '" + aLname + "%' AND ";
+                }
+
+                if (auPhone != "")
+                {
+                    filter = filter + "phone LIKE '" + auPhone + "%' AND ";
+                }
+
+                if (authorAddress.Text != "")
+                {
+                    filter = filter + "address LIKE '" + authorAddress.Text + "%' AND ";
+                }
+
+                if (authorCity.Text != "")
+                {
+                    filter = filter + "city LIKE '" + authorCity.Text + "%' AND ";
+                }
+
+                if (authorState.Text != "")
+                {
+                    filter = filter + "state LIKE '" + authorState.Text + "%' AND ";
+                }
+
+                if (authorZip.Text != "")
+                {
+                    filter = filter + "zip LIKE '" + authorZip.Text + "%' AND ";
+                }
+                if (contractCheckbox.Checked && authorInclude.Checked)
+                {
+                    filter = filter + "contract = 1 AND ";
+                }
+                else if (!contractCheckbox.Checked && authorInclude.Checked)
+                {
+                    filter = filter + "contract = 0 AND ";
+                }
+
+                if (filter.Length > 0)
+                {
+                    String finalFilter = filter.Remove(filter.Length - 4, 3);
+                    SqlDataAdapter a = new SqlDataAdapter("Select * From AUTHOR Where " + finalFilter, c);
+                    DataTable t = new DataTable();
+                    a.Fill(t);
+                    dataGridView1.DataSource = t;
+                }
+                else if (filter.Length == 0)
+                {
+                    SqlDataAdapter a = new SqlDataAdapter("Select * From AUTHOR", c);
+                    DataTable t = new DataTable();
+                    a.Fill(t);
+                    dataGridView1.DataSource = t;
+                }
+                c.Close();
+            //}
+           /* c.Open();
             String aID = authorID.Text;
             String aFname = authorFirstName.Text;
             String aLname = authorLastName.Text;
@@ -61,12 +136,12 @@ namespace PubsDatabase
 
             if (aFname != "")
             {
-                filter = filter + "au_fname LIKE '" + aFname + "%' AND ";
+                filter = filter + "first_name LIKE '" + aFname + "%' AND ";
             }
 
             if (aLname != "")
             {
-                filter = filter + "au_lname LIKE '" + aLname + "%' AND ";
+                filter = filter + "last_name LIKE '" + aLname + "%' AND ";
             }
 
             if (auPhone != "")
@@ -104,18 +179,19 @@ namespace PubsDatabase
             if (filter.Length > 0)
             {
                 String finalFilter = filter.Remove(filter.Length - 4, 3);
-                SqlDataAdapter a = new SqlDataAdapter("Select * From authors Where " + finalFilter, c);
+                SqlDataAdapter a = new SqlDataAdapter("Select * From AUTHOR Where " + finalFilter, c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView1.DataSource = t;
             } else if (filter.Length == 0)
             {
-                SqlDataAdapter a = new SqlDataAdapter("Select * From authors", c);
+                SqlDataAdapter a = new SqlDataAdapter("Select * From AUTHOR", c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView1.DataSource = t;
             }
             c.Close();
+            */
         }
 
         /// 
@@ -123,11 +199,12 @@ namespace PubsDatabase
         /// 
         private void addAuthor_Click(object sender, EventArgs e)
         {
+            c.Open();
             if (authorFirstName.Text != "" && authorLastName.Text != "" && authorID.Text != "" && authorPhoneNumber.Text != "" && authorZip.Text != "")
             {
-                pubsDataSet.authorsRow newAuthor = pubsDataSet.authors.NewauthorsRow();
-                newAuthor.au_fname = authorFirstName.Text;
-                newAuthor.au_lname = authorLastName.Text;
+                pubsDataSet1.AUTHORRow newAuthor = pubsDataSet1.AUTHOR.NewAUTHORRow();
+                newAuthor.first_name = authorFirstName.Text;
+                newAuthor.last_name = authorLastName.Text;
                 newAuthor.au_id = authorID.Text;
                 newAuthor.address = authorAddress.Text;
                 newAuthor.phone = authorPhoneNumber.Text;
@@ -136,9 +213,11 @@ namespace PubsDatabase
                 newAuthor.zip = authorZip.Text;
                 newAuthor.contract = contractCheckbox.Checked;
 
-                this.pubsDataSet.authors.Rows.Add(newAuthor);
-                this.authorsTableAdapter.Update(this.pubsDataSet.authors);
-                SqlDataAdapter a = new SqlDataAdapter("Select * From authors", c);
+                
+
+                this.pubsDataSet1.AUTHOR.Rows.Add(newAuthor);
+                this.aUTHORTableAdapter.Update(this.pubsDataSet1.AUTHOR);
+                SqlDataAdapter a = new SqlDataAdapter("Select * From author", c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView1.DataSource = t;
@@ -157,16 +236,16 @@ namespace PubsDatabase
         {
             try
             {
-                using (c)
-                {
+                //using (c)
+                //{
                     c.Open();
                     if (authorID.Text != "")
                     {
-                        using (SqlCommand com = new SqlCommand("Delete from authors where au_id = '" + authorID.Text + "'", c))
+                        using (SqlCommand com = new SqlCommand("Delete from author where au_id = '" + authorID.Text + "'", c))
                         {
                             com.ExecuteNonQuery();
                         }
-                        SqlDataAdapter a = new SqlDataAdapter("Select * From authors", c);
+                        SqlDataAdapter a = new SqlDataAdapter("Select * From author", c);
                         DataTable t = new DataTable();
                         a.Fill(t);
                         dataGridView1.DataSource = t;
@@ -176,11 +255,11 @@ namespace PubsDatabase
                     {
                         MessageBox.Show(string.Format("The Author ID text field must have a value in order to delete an author."));
                     }
-                }
+                //}
             }
             catch (SystemException ex)
             {
-                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+                MessageBox.Show(string.Format("Author ID not found. Please enter a valid Author ID to delete."));
             }
 
 
@@ -230,7 +309,7 @@ namespace PubsDatabase
 
             if (publisherName != "")
             {
-                filter = filter + "pub_name LIKE '" + publisherName + "%' AND ";
+                filter = filter + "publisher_name LIKE '" + publisherName + "%' AND ";
             }
 
             if (publisherID != "")
@@ -254,14 +333,14 @@ namespace PubsDatabase
             if (filter.Length > 0)
             {
                 String finalFilter = filter.Remove(filter.Length - 4, 3);
-                SqlDataAdapter a = new SqlDataAdapter("Select * From publisherinfo Where " + finalFilter, c);
+                SqlDataAdapter a = new SqlDataAdapter("Select * From PUBLISHER Where " + finalFilter, c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView2.DataSource = t;
             }
             else if (filter.Length == 0)
             {
-                SqlDataAdapter a = new SqlDataAdapter("Select * From publisherinfo", c);
+                SqlDataAdapter a = new SqlDataAdapter("Select * From PUBLISHER", c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView2.DataSource = t;
@@ -274,21 +353,32 @@ namespace PubsDatabase
         /// 
         private void pubAdd_Click(object sender, EventArgs e)
         {
-            //if ()
-            //{
-            pubsDataSet.publisherinfoRow newPublisher = pubsDataSet.publisherinfo.NewpublisherinfoRow();
-            newPublisher.pub_id = pubID.Text;
-            newPublisher.pub_name = pubName.Text;
-            newPublisher.city = pubCity.Text;
-            newPublisher.state = pubState.Text;
-            newPublisher.country = pubCountry.Text;
-            this.pubsDataSet.publisherinfo.Rows.Add(newPublisher);
-            this.publisherinfoTableAdapter.Update(this.pubsDataSet.publisherinfo);
-            //}
-            //else
-            //{
-
-            //}
+            string id = pubID.Text;
+            bool check = true;
+            foreach(char c in id)
+            {
+                if(c < '0' || c > '9')
+                {
+                    check = false;
+                }
+            }
+            if (pubID.Text.Length == 4 && pubID.Text.StartsWith("99") && check)
+            {
+                pubsDataSet1.PUBLISHERRow newPublisher = pubsDataSet1.PUBLISHER.NewPUBLISHERRow();
+                newPublisher.pub_id = pubID.Text;
+                newPublisher.publisher_name = pubName.Text;
+                newPublisher.city = pubCity.Text;
+                newPublisher.state = pubState.Text;
+                newPublisher.country = pubCountry.Text;
+                newPublisher.public_relationship_info = null;
+                newPublisher.logo = null;
+                this.pubsDataSet1.PUBLISHER.Rows.Add(newPublisher);
+                this.pUBLISHERTableAdapter.Update(this.pubsDataSet1.PUBLISHER);
+            }
+            else
+            {
+                MessageBox.Show(string.Format("The following required text field to add a new publisher is empty:\nPublisher ID\n\nThe Publisher ID must be a 4-digit code starting with 99."));
+            }
         }
 
         /// 
@@ -298,16 +388,17 @@ namespace PubsDatabase
         {
             try
             {
-                using (c)
-                {
+                //using (c)
+                //{
                     c.Open();
                     if (pubID.Text != "")
                     {
-                        using (SqlCommand com = new SqlCommand("Delete from publishers where pub_id = '" + pubID.Text + "'", c))
+                        using (SqlCommand com = new SqlCommand("Delete from publisher where pub_id = '" + pubID.Text + "'", c))
                         {
+                            Console.Write("HERE");
                             com.ExecuteNonQuery();
                         }
-                        SqlDataAdapter a = new SqlDataAdapter("Select * From publishers", c);
+                        SqlDataAdapter a = new SqlDataAdapter("Select * From publisher", c);
                         DataTable t = new DataTable();
                         a.Fill(t);
                         dataGridView2.DataSource = t;
@@ -318,11 +409,11 @@ namespace PubsDatabase
                         MessageBox.Show(string.Format("The Publisher ID text field must have a value in order to delete a publisher."));
                     }
 
-                }
+                //}
             }
             catch (SystemException ex)
             {
-                MessageBox.Show(string.Format("An error occurred: {0}", ex.Message));
+                MessageBox.Show(string.Format("Please enter a valid Publisher ID to delete a publisher."));
             }
 
 
@@ -357,6 +448,7 @@ namespace PubsDatabase
             String storesCity = storeCity.Text;
             String storesState = storeState.Text;
             String storesZip = storeZipCode.Text;
+            String storesPromotion = storePromotion.Text;
             String filter = "";
 
             if (storesName != "")
@@ -365,7 +457,7 @@ namespace PubsDatabase
                 {
                     storesName = storesName.Replace("'", "''");
                 }
-                filter = filter + "stor_name LIKE '" + storesName + "%' AND ";
+                filter = filter + "store_name LIKE '" + storesName + "%' AND ";
             }
 
             if (storesID != "")
@@ -374,7 +466,7 @@ namespace PubsDatabase
             }
             if (storesAddress != "")
             {
-                filter = filter + "stor_address LIKE '" + storesAddress + "%' AND ";
+                filter = filter + "store_address LIKE '" + storesAddress + "%' AND ";
             }
 
             if (storesCity != "")
@@ -389,18 +481,22 @@ namespace PubsDatabase
             {
                 filter = filter + "zip LIKE '" + storesZip + "%' AND ";
             }
+            if (storesPromotion != "")
+            {
+                filter = filter + "promotion_id LIKE '" + storesPromotion + "%' AND ";
+            }
 
             if (filter.Length > 0)
             {
                 String finalFilter = filter.Remove(filter.Length - 4, 3);
-                SqlDataAdapter a = new SqlDataAdapter("Select * From stores Where " + finalFilter, c);
+                SqlDataAdapter a = new SqlDataAdapter("Select * From store Where " + finalFilter, c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView3.DataSource = t;
             }
             else if (filter.Length == 0)
             {
-                SqlDataAdapter a = new SqlDataAdapter("Select * From stores", c);
+                SqlDataAdapter a = new SqlDataAdapter("Select * From store", c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView3.DataSource = t;
@@ -413,22 +509,46 @@ namespace PubsDatabase
         /// 
         private void storeAdd_Click(object sender, EventArgs e)
         {
-            //if ()
-            //{
-            pubsDataSet.storesRow newStore = pubsDataSet.stores.NewstoresRow();
+            bool check = true;
+            foreach (char c in storeID.Text)
+            {
+                if (c < '0' || c > '9')
+                {
+                    check = false;
+                }
+            }
+            if (check && storeID.Text.Length == 4)
+            {
+           // pubsDataSet.storesRow newStore = pubsDataSet.stores.NewstoresRow();
+            pubsDataSet1.STORERow newStore = pubsDataSet1.STORE.NewSTORERow();
             newStore.stor_id = storeID.Text;
-            newStore.stor_name = storeName.Text;
-            newStore.stor_address = storeAddress.Text;
+            newStore.store_name = storeName.Text;
+            newStore.store_address = storeAddress.Text;
             newStore.city = storeCity.Text;
             newStore.state = storeState.Text;
             newStore.zip = storeZipCode.Text;
-            this.pubsDataSet.stores.Rows.Add(newStore);
-            this.storesTableAdapter.Update(this.pubsDataSet.stores);
-            //}
-            //else
-            //{
-
-            //}
+            if(storePromotion.Text != "")
+                {
+                    bool check2 = true;
+                    foreach (char c in storePromotion.Text)
+                    {
+                        if (c < '0' || c > '9')
+                        {
+                            check2 = false;
+                        }
+                    }
+                    if (check2)
+                    {   
+                        newStore.promotion_id = int.Parse(storePromotion.Text);
+                    }
+                }
+            
+            this.pubsDataSet1.STORE.Rows.Add(newStore);
+            this.sTORETableAdapter.Update(this.pubsDataSet1.STORE);
+            }else
+            {
+                MessageBox.Show(string.Format("The following required text field to add a new store is empty:\nStore ID\n\nThe Store ID must be a 4-digit code."));
+            }
         }
 
         /// 
@@ -438,16 +558,16 @@ namespace PubsDatabase
         {
             try
             {
-                using (c)
-                {
+                //using (c)
+                //{
                     c.Open();
                     if (storeID.Text != "")
                     {
-                        using (SqlCommand com = new SqlCommand("Delete from stores where stor_id = '" + storeID.Text + "'", c))
+                        using (SqlCommand com = new SqlCommand("Delete from store where stor_id = '" + storeID.Text + "'", c))
                         {
                             com.ExecuteNonQuery();
                         }
-                        SqlDataAdapter a = new SqlDataAdapter("Select * From stores", c);
+                        SqlDataAdapter a = new SqlDataAdapter("Select * From store", c);
                         DataTable t = new DataTable();
                         a.Fill(t);
                         dataGridView3.DataSource = t;
@@ -458,7 +578,7 @@ namespace PubsDatabase
                         MessageBox.Show(string.Format("The Store ID text field must have a value in order to delete a store."));
                     }
 
-                }
+                //}
             }
             catch (SystemException ex)
             {
@@ -482,6 +602,8 @@ namespace PubsDatabase
             if(storeState.Text != ""){storeState.Text = "";}
 
             if(storeZipCode.Text != ""){storeZipCode.Text = "";}
+
+            if(storePromotion.Text != ""){ storePromotion.Text = ""; }
         }
 
         /// 
@@ -499,7 +621,7 @@ namespace PubsDatabase
 
             if (title.Text != "")
             {
-                filter = filter + "title LIKE '" + title.Text + "%' AND ";
+                filter = filter + "title_name LIKE '" + title.Text + "%' AND ";
             }
 
             if (genre.Text != "")
@@ -512,7 +634,7 @@ namespace PubsDatabase
             }
             if (datePublished.Text != "")
             {
-                filter = filter + "pubDate LIKE '" + datePublished.Text + "%' AND ";
+                filter = filter + "publication_date LIKE '" + datePublished.Text + "%' AND ";
             }
             /*
             if (titleAuthorFName.Text != "")
@@ -528,14 +650,14 @@ namespace PubsDatabase
             if (filter.Length > 0)
             {
                 String finalFilter = filter.Remove(filter.Length - 4, 3);
-                SqlDataAdapter a = new SqlDataAdapter("Select * From titles Where " + finalFilter, c);
+                SqlDataAdapter a = new SqlDataAdapter("Select * From title Where " + finalFilter, c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView4.DataSource = t;
             }
             else if (filter.Length == 0)
             {
-                SqlDataAdapter a = new SqlDataAdapter("Select * From titles", c);
+                SqlDataAdapter a = new SqlDataAdapter("Select * From title", c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView4.DataSource = t;
@@ -550,54 +672,80 @@ namespace PubsDatabase
         private void titleAdd_Click(object sender, EventArgs e)
         {
             //c.Open();
-
-            String filter = "";
-            String cols = "";
-            String dt = "";
-
-            if (titleID.Text != "")
+            bool pubIDCheck = true;
+            foreach (char c in titlePubID.Text)
             {
-                cols += "title_id, ";
-                filter = filter + "'" + titleID.Text + "', ";
-            }
-
-            if (title.Text != "")
-            {
-                cols += "title, ";
-                filter = filter + "'" + title.Text + "', ";
-            }
-
-            if (genre.Text != "")
-            {
-                cols += "type, ";
-                filter = filter + "'" + genre.Text + "', ";
-            }
-            if (titlePubID.Text != "")
-            {
-                cols += "pub_id, ";
-                filter = filter + "'" + titlePubID.Text + "', ";
-            }
-            if ( datePublished.Text != "")
-            {
-                cols += "pubdate, ";
-                dt = "'" + datePublished.Text + "'";
-            }
-            String finalFilter = filter.Remove(filter.Length - 2, 2);
-            String finalCols = cols.Remove(cols.Length - 2, 2);
-
-            using (c)
-            {
-                c.Open();
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO titles (" + finalCols + ") values (" + finalFilter + ", convert(datetime, " + dt + ", 1))", c))
+                if (c < '0' || c > '9')
                 {
-                    cmd.ExecuteNonQuery();
+                    pubIDCheck = false;
                 }
-                SqlDataAdapter a = new SqlDataAdapter("Select * From titles", c);
+            }
+            if (pubIDCheck && title.Text != "" && titleID.Text != "" && genre.Text != "")
+            {
+                String filter = "";
+                String cols = "";
+                String dt = "";
+
+                if (titleID.Text != "")
+                {
+                    cols += "title_id, ";
+                    filter = filter + "'" + titleID.Text + "', ";
+                }
+
+                if (title.Text != "")
+                {
+                    cols += "title_name, ";
+                    filter = filter + "'" + title.Text + "', ";
+                }
+
+                if (genre.Text != "")
+                {
+                    cols += "type, ";
+                    filter = filter + "'" + genre.Text + "', ";
+                }
+                if (titlePubID.Text != "")
+                {
+                    cols += "pub_id, ";
+                    filter = filter + "'" + titlePubID.Text + "', ";
+                }
+                if (datePublished.Text != "")
+                {
+                    cols += "publication_date, ";
+                    dt = "'" + datePublished.Text + "'";
+                }
+                String finalFilter = filter.Remove(filter.Length - 2, 2);
+                String finalCols = cols.Remove(cols.Length - 2, 2);
+
+                
+                c.Open();
+                if(datePublished.Text == "")
+                {
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO title (" + finalCols + ") values (" + finalFilter + ")", c))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                else
+                {
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO title (" + finalCols + ") values (" + finalFilter + ", convert(datetime, " + dt + ", 1))", c))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                
+                SqlDataAdapter a = new SqlDataAdapter("Select * From title", c);
                 DataTable t = new DataTable();
                 a.Fill(t);
                 dataGridView4.DataSource = t;
                 c.Close();
+                
             }
+            else
+            {
+                MessageBox.Show(string.Format("One or more of the following required text fields to add a new title are empty:\nTitle ID\nTitle Name\nGenre"));
+            }
+
+
 
         }
 
@@ -608,16 +756,16 @@ namespace PubsDatabase
         {
             try
             {
-                using (c)
-                {
+                //using (c)
+                //{
                     c.Open();
                     if (titleID.Text != "")
                     {
-                        using (SqlCommand com = new SqlCommand("Delete from titles where title_id = '" + titleID.Text + "'", c))
+                        using (SqlCommand com = new SqlCommand("Delete from title where title_id = '" + titleID.Text + "'", c))
                         {
                             com.ExecuteNonQuery();
                         }
-                        SqlDataAdapter a = new SqlDataAdapter("Select * From titles", c);
+                        SqlDataAdapter a = new SqlDataAdapter("Select * From title", c);
                         DataTable t = new DataTable();
                         a.Fill(t);
                         dataGridView4.DataSource = t;
@@ -628,7 +776,7 @@ namespace PubsDatabase
                         MessageBox.Show(string.Format("The Title ID text field must have a value in order to delete a title."));
                     }
 
-                }
+                //}
             }
             catch (SystemException ex)
             {
@@ -658,5 +806,20 @@ namespace PubsDatabase
            
             f2.ShowDialog();
         }
+
+        private void dataGridView4_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form3 f3 = new Form3(this.dataGridView4.CurrentRow.Cells[1].Value.ToString(), this.dataGridView4.CurrentRow.Cells[0].Value.ToString(), this.dataGridView4.CurrentRow.Cells[2].Value.ToString());
+            f3.ShowDialog();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form2 f2 = new Form2(this.dataGridView1.CurrentRow.Cells[2].Value.ToString(), this.dataGridView1.CurrentRow.Cells[1].Value.ToString(), this.dataGridView1.CurrentRow.Cells[0].Value.ToString());
+
+            f2.ShowDialog();
+        }
+
+
     }
 }

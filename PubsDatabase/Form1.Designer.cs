@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label au_idLabel;
-            System.Windows.Forms.Label au_fnameLabel;
-            System.Windows.Forms.Label au_lnameLabel;
-            System.Windows.Forms.Label stateLabel;
-            System.Windows.Forms.Label authorCityLabel;
-            System.Windows.Forms.Label addressLabel;
-            System.Windows.Forms.Label pubCityLabel;
-            System.Windows.Forms.Label pubIDLabel;
-            System.Windows.Forms.Label pubNameLabel;
-            System.Windows.Forms.Label pubCountryLabel;
-            System.Windows.Forms.Label pubStateLabel;
-            System.Windows.Forms.Label storeStateLabel;
-            System.Windows.Forms.Label stoerCityLabel;
-            System.Windows.Forms.Label storeAddressLabel;
-            System.Windows.Forms.Label storeIDLabel;
-            System.Windows.Forms.Label storeNameLabel;
-            System.Windows.Forms.Label genreLabel;
-            System.Windows.Forms.Label titleLabel;
-            System.Windows.Forms.Label titleIDLabel;
-            System.Windows.Forms.Label datePublishedLabel;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.au_idLabel = new System.Windows.Forms.Label();
+            this.au_fnameLabel = new System.Windows.Forms.Label();
+            this.au_lnameLabel = new System.Windows.Forms.Label();
+            this.stateLabel = new System.Windows.Forms.Label();
+            this.authorCityLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.pubCityLabel = new System.Windows.Forms.Label();
+            this.pubIDLabel = new System.Windows.Forms.Label();
+            this.pubNameLabel = new System.Windows.Forms.Label();
+            this.pubCountryLabel = new System.Windows.Forms.Label();
+            this.pubStateLabel = new System.Windows.Forms.Label();
+            this.storeStateLabel = new System.Windows.Forms.Label();
+            this.stoerCityLabel = new System.Windows.Forms.Label();
+            this.storeAddressLabel = new System.Windows.Forms.Label();
+            this.storeIDLabel = new System.Windows.Forms.Label();
+            this.storeNameLabel = new System.Windows.Forms.Label();
+            this.genreLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.titleIDLabel = new System.Windows.Forms.Label();
+            this.datePublishedLabel = new System.Windows.Forms.Label();
             this.pubsTabControl = new System.Windows.Forms.TabControl();
             this.authorsTab = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.authorInclude = new System.Windows.Forms.CheckBox();
             this.authorClear = new System.Windows.Forms.Button();
             this.contractCheckbox = new System.Windows.Forms.CheckBox();
@@ -73,16 +74,17 @@
             this.authorSubmit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.auidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aulnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aufnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contractDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.authorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pubsDataSet = new PubsDatabase.pubsDataSet();
+            this.aUTHORBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pubsDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pubsDataSet1 = new PubsDatabase.pubsDataSet1();
             this.publishersTab = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.pubClear = new System.Windows.Forms.Button();
@@ -97,14 +99,14 @@
             this.pubID = new System.Windows.Forms.TextBox();
             this.pubCity = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.publisher_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pubidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pubnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cityDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.logo = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pr_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.publisherinfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.public_relationship_info = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pUBLISHERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storesTab = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.storeClear = new System.Windows.Forms.Button();
@@ -121,16 +123,9 @@
             this.storeID = new System.Windows.Forms.TextBox();
             this.storeAddress = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.storidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stornameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storaddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.zipDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTOREBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.titlesTab = new System.Windows.Forms.TabPage();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.titleView = new System.Windows.Forms.Button();
             this.titleClear = new System.Windows.Forms.Button();
             this.titleDelete = new System.Windows.Forms.Button();
             this.titleAdd = new System.Windows.Forms.Button();
@@ -144,45 +139,41 @@
             this.genre = new System.Windows.Forms.TextBox();
             this.titlePubID = new System.Windows.Forms.TextBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.titleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pubidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.advanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.royaltyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ytdsalesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pubdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titlesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tITLEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchTab = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.authorsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pubsDataSet = new PubsDatabase.pubsDataSet();
+            this.publisherinfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.titlesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.authorsTableAdapter = new PubsDatabase.pubsDataSetTableAdapters.authorsTableAdapter();
             this.tableAdapterManager = new PubsDatabase.pubsDataSetTableAdapters.TableAdapterManager();
             this.publisherinfoTableAdapter = new PubsDatabase.pubsDataSetTableAdapters.publisherinfoTableAdapter();
             this.storesTableAdapter = new PubsDatabase.pubsDataSetTableAdapters.storesTableAdapter();
             this.titlesTableAdapter = new PubsDatabase.pubsDataSetTableAdapters.titlesTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            au_idLabel = new System.Windows.Forms.Label();
-            au_fnameLabel = new System.Windows.Forms.Label();
-            au_lnameLabel = new System.Windows.Forms.Label();
-            stateLabel = new System.Windows.Forms.Label();
-            authorCityLabel = new System.Windows.Forms.Label();
-            addressLabel = new System.Windows.Forms.Label();
-            pubCityLabel = new System.Windows.Forms.Label();
-            pubIDLabel = new System.Windows.Forms.Label();
-            pubNameLabel = new System.Windows.Forms.Label();
-            pubCountryLabel = new System.Windows.Forms.Label();
-            pubStateLabel = new System.Windows.Forms.Label();
-            storeStateLabel = new System.Windows.Forms.Label();
-            stoerCityLabel = new System.Windows.Forms.Label();
-            storeAddressLabel = new System.Windows.Forms.Label();
-            storeIDLabel = new System.Windows.Forms.Label();
-            storeNameLabel = new System.Windows.Forms.Label();
-            genreLabel = new System.Windows.Forms.Label();
-            titleLabel = new System.Windows.Forms.Label();
-            titleIDLabel = new System.Windows.Forms.Label();
-            datePublishedLabel = new System.Windows.Forms.Label();
+            this.aUTHORTableAdapter = new PubsDatabase.pubsDataSet1TableAdapters.AUTHORTableAdapter();
+            this.pUBLISHERTableAdapter = new PubsDatabase.pubsDataSet1TableAdapters.PUBLISHERTableAdapter();
+            this.sTORETableAdapter = new PubsDatabase.pubsDataSet1TableAdapters.STORETableAdapter();
+            this.tITLETableAdapter = new PubsDatabase.pubsDataSet1TableAdapters.TITLETableAdapter();
+            this.storePromotionLabel = new System.Windows.Forms.Label();
+            this.storePromotion = new System.Windows.Forms.TextBox();
+            this.store_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.store_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.zipDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.promotion_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pubidDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.publication_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.advanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.royaltyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ytdsalesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pubsTabControl.SuspendLayout();
             this.authorsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -192,8 +183,9 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTHORBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet1)).BeginInit();
             this.publishersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -202,7 +194,7 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publisherinfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pUBLISHERBindingSource)).BeginInit();
             this.storesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -211,7 +203,7 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTOREBindingSource)).BeginInit();
             this.titlesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
@@ -220,211 +212,216 @@
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.titlesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tITLEBindingSource)).BeginInit();
             this.searchTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
             this.splitContainer5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.publisherinfoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // au_idLabel
             // 
-            au_idLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            au_idLabel.AutoSize = true;
-            au_idLabel.Location = new System.Drawing.Point(3, 6);
-            au_idLabel.Name = "au_idLabel";
-            au_idLabel.Size = new System.Drawing.Size(55, 13);
-            au_idLabel.TabIndex = 0;
-            au_idLabel.Text = "Author ID:";
+            this.au_idLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.au_idLabel.AutoSize = true;
+            this.au_idLabel.Location = new System.Drawing.Point(3, 6);
+            this.au_idLabel.Name = "au_idLabel";
+            this.au_idLabel.Size = new System.Drawing.Size(55, 13);
+            this.au_idLabel.TabIndex = 0;
+            this.au_idLabel.Text = "Author ID:";
             // 
             // au_fnameLabel
             // 
-            au_fnameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            au_fnameLabel.AutoSize = true;
-            au_fnameLabel.Location = new System.Drawing.Point(3, 32);
-            au_fnameLabel.Name = "au_fnameLabel";
-            au_fnameLabel.Size = new System.Drawing.Size(60, 13);
-            au_fnameLabel.TabIndex = 2;
-            au_fnameLabel.Text = "First Name:";
+            this.au_fnameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.au_fnameLabel.AutoSize = true;
+            this.au_fnameLabel.Location = new System.Drawing.Point(3, 32);
+            this.au_fnameLabel.Name = "au_fnameLabel";
+            this.au_fnameLabel.Size = new System.Drawing.Size(60, 13);
+            this.au_fnameLabel.TabIndex = 2;
+            this.au_fnameLabel.Text = "First Name:";
             // 
             // au_lnameLabel
             // 
-            au_lnameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            au_lnameLabel.AutoSize = true;
-            au_lnameLabel.Location = new System.Drawing.Point(3, 58);
-            au_lnameLabel.Name = "au_lnameLabel";
-            au_lnameLabel.Size = new System.Drawing.Size(61, 13);
-            au_lnameLabel.TabIndex = 4;
-            au_lnameLabel.Text = "Last Name:";
+            this.au_lnameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.au_lnameLabel.AutoSize = true;
+            this.au_lnameLabel.Location = new System.Drawing.Point(3, 58);
+            this.au_lnameLabel.Name = "au_lnameLabel";
+            this.au_lnameLabel.Size = new System.Drawing.Size(61, 13);
+            this.au_lnameLabel.TabIndex = 4;
+            this.au_lnameLabel.Text = "Last Name:";
             // 
             // stateLabel
             // 
-            stateLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            stateLabel.AutoSize = true;
-            stateLabel.Location = new System.Drawing.Point(3, 58);
-            stateLabel.Name = "stateLabel";
-            stateLabel.Size = new System.Drawing.Size(35, 13);
-            stateLabel.TabIndex = 4;
-            stateLabel.Text = "State:";
+            this.stateLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.stateLabel.AutoSize = true;
+            this.stateLabel.Location = new System.Drawing.Point(3, 58);
+            this.stateLabel.Name = "stateLabel";
+            this.stateLabel.Size = new System.Drawing.Size(35, 13);
+            this.stateLabel.TabIndex = 4;
+            this.stateLabel.Text = "State:";
             // 
             // authorCityLabel
             // 
-            authorCityLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            authorCityLabel.AutoSize = true;
-            authorCityLabel.Location = new System.Drawing.Point(3, 32);
-            authorCityLabel.Name = "authorCityLabel";
-            authorCityLabel.Size = new System.Drawing.Size(27, 13);
-            authorCityLabel.TabIndex = 2;
-            authorCityLabel.Text = "City:";
+            this.authorCityLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.authorCityLabel.AutoSize = true;
+            this.authorCityLabel.Location = new System.Drawing.Point(3, 32);
+            this.authorCityLabel.Name = "authorCityLabel";
+            this.authorCityLabel.Size = new System.Drawing.Size(27, 13);
+            this.authorCityLabel.TabIndex = 2;
+            this.authorCityLabel.Text = "City:";
             // 
             // addressLabel
             // 
-            addressLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(3, 6);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new System.Drawing.Size(48, 13);
-            addressLabel.TabIndex = 0;
-            addressLabel.Text = "Address:";
+            this.addressLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Location = new System.Drawing.Point(3, 6);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(48, 13);
+            this.addressLabel.TabIndex = 0;
+            this.addressLabel.Text = "Address:";
             // 
             // pubCityLabel
             // 
-            pubCityLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pubCityLabel.AutoSize = true;
-            pubCityLabel.Location = new System.Drawing.Point(3, 58);
-            pubCityLabel.Name = "pubCityLabel";
-            pubCityLabel.Size = new System.Drawing.Size(27, 13);
-            pubCityLabel.TabIndex = 4;
-            pubCityLabel.Text = "City:";
+            this.pubCityLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pubCityLabel.AutoSize = true;
+            this.pubCityLabel.Location = new System.Drawing.Point(3, 58);
+            this.pubCityLabel.Name = "pubCityLabel";
+            this.pubCityLabel.Size = new System.Drawing.Size(27, 13);
+            this.pubCityLabel.TabIndex = 4;
+            this.pubCityLabel.Text = "City:";
             // 
             // pubIDLabel
             // 
-            pubIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pubIDLabel.AutoSize = true;
-            pubIDLabel.Location = new System.Drawing.Point(3, 32);
-            pubIDLabel.Name = "pubIDLabel";
-            pubIDLabel.Size = new System.Drawing.Size(67, 13);
-            pubIDLabel.TabIndex = 2;
-            pubIDLabel.Text = "Publisher ID:";
+            this.pubIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pubIDLabel.AutoSize = true;
+            this.pubIDLabel.Location = new System.Drawing.Point(3, 32);
+            this.pubIDLabel.Name = "pubIDLabel";
+            this.pubIDLabel.Size = new System.Drawing.Size(67, 13);
+            this.pubIDLabel.TabIndex = 2;
+            this.pubIDLabel.Text = "Publisher ID:";
             // 
             // pubNameLabel
             // 
-            pubNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pubNameLabel.AutoSize = true;
-            pubNameLabel.Location = new System.Drawing.Point(3, 6);
-            pubNameLabel.Name = "pubNameLabel";
-            pubNameLabel.Size = new System.Drawing.Size(81, 13);
-            pubNameLabel.TabIndex = 0;
-            pubNameLabel.Text = "PublisherName:";
+            this.pubNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pubNameLabel.AutoSize = true;
+            this.pubNameLabel.Location = new System.Drawing.Point(3, 6);
+            this.pubNameLabel.Name = "pubNameLabel";
+            this.pubNameLabel.Size = new System.Drawing.Size(81, 13);
+            this.pubNameLabel.TabIndex = 0;
+            this.pubNameLabel.Text = "PublisherName:";
             // 
             // pubCountryLabel
             // 
-            pubCountryLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pubCountryLabel.AutoSize = true;
-            pubCountryLabel.Location = new System.Drawing.Point(3, 34);
-            pubCountryLabel.Name = "pubCountryLabel";
-            pubCountryLabel.Size = new System.Drawing.Size(46, 13);
-            pubCountryLabel.TabIndex = 2;
-            pubCountryLabel.Text = "Country:";
+            this.pubCountryLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pubCountryLabel.AutoSize = true;
+            this.pubCountryLabel.Location = new System.Drawing.Point(3, 34);
+            this.pubCountryLabel.Name = "pubCountryLabel";
+            this.pubCountryLabel.Size = new System.Drawing.Size(46, 13);
+            this.pubCountryLabel.TabIndex = 2;
+            this.pubCountryLabel.Text = "Country:";
             // 
             // pubStateLabel
             // 
-            pubStateLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            pubStateLabel.AutoSize = true;
-            pubStateLabel.Location = new System.Drawing.Point(3, 6);
-            pubStateLabel.Name = "pubStateLabel";
-            pubStateLabel.Size = new System.Drawing.Size(35, 13);
-            pubStateLabel.TabIndex = 0;
-            pubStateLabel.Text = "State:";
+            this.pubStateLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pubStateLabel.AutoSize = true;
+            this.pubStateLabel.Location = new System.Drawing.Point(3, 6);
+            this.pubStateLabel.Name = "pubStateLabel";
+            this.pubStateLabel.Size = new System.Drawing.Size(35, 13);
+            this.pubStateLabel.TabIndex = 0;
+            this.pubStateLabel.Text = "State:";
             // 
             // storeStateLabel
             // 
-            storeStateLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            storeStateLabel.AutoSize = true;
-            storeStateLabel.Location = new System.Drawing.Point(3, 32);
-            storeStateLabel.Name = "storeStateLabel";
-            storeStateLabel.Size = new System.Drawing.Size(35, 13);
-            storeStateLabel.TabIndex = 2;
-            storeStateLabel.Text = "State:";
+            this.storeStateLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.storeStateLabel.AutoSize = true;
+            this.storeStateLabel.Location = new System.Drawing.Point(3, 32);
+            this.storeStateLabel.Name = "storeStateLabel";
+            this.storeStateLabel.Size = new System.Drawing.Size(35, 13);
+            this.storeStateLabel.TabIndex = 2;
+            this.storeStateLabel.Text = "State:";
             // 
             // stoerCityLabel
             // 
-            stoerCityLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            stoerCityLabel.AutoSize = true;
-            stoerCityLabel.Location = new System.Drawing.Point(3, 6);
-            stoerCityLabel.Name = "stoerCityLabel";
-            stoerCityLabel.Size = new System.Drawing.Size(27, 13);
-            stoerCityLabel.TabIndex = 0;
-            stoerCityLabel.Text = "City:";
+            this.stoerCityLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.stoerCityLabel.AutoSize = true;
+            this.stoerCityLabel.Location = new System.Drawing.Point(3, 6);
+            this.stoerCityLabel.Name = "stoerCityLabel";
+            this.stoerCityLabel.Size = new System.Drawing.Size(27, 13);
+            this.stoerCityLabel.TabIndex = 0;
+            this.stoerCityLabel.Text = "City:";
             // 
             // storeAddressLabel
             // 
-            storeAddressLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            storeAddressLabel.AutoSize = true;
-            storeAddressLabel.Location = new System.Drawing.Point(3, 58);
-            storeAddressLabel.Name = "storeAddressLabel";
-            storeAddressLabel.Size = new System.Drawing.Size(48, 13);
-            storeAddressLabel.TabIndex = 4;
-            storeAddressLabel.Text = "Address:";
+            this.storeAddressLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.storeAddressLabel.AutoSize = true;
+            this.storeAddressLabel.Location = new System.Drawing.Point(3, 58);
+            this.storeAddressLabel.Name = "storeAddressLabel";
+            this.storeAddressLabel.Size = new System.Drawing.Size(48, 13);
+            this.storeAddressLabel.TabIndex = 4;
+            this.storeAddressLabel.Text = "Address:";
             // 
             // storeIDLabel
             // 
-            storeIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            storeIDLabel.AutoSize = true;
-            storeIDLabel.Location = new System.Drawing.Point(3, 32);
-            storeIDLabel.Name = "storeIDLabel";
-            storeIDLabel.Size = new System.Drawing.Size(49, 13);
-            storeIDLabel.TabIndex = 2;
-            storeIDLabel.Text = "Store ID:";
+            this.storeIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.storeIDLabel.AutoSize = true;
+            this.storeIDLabel.Location = new System.Drawing.Point(3, 32);
+            this.storeIDLabel.Name = "storeIDLabel";
+            this.storeIDLabel.Size = new System.Drawing.Size(49, 13);
+            this.storeIDLabel.TabIndex = 2;
+            this.storeIDLabel.Text = "Store ID:";
             // 
             // storeNameLabel
             // 
-            storeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            storeNameLabel.AutoSize = true;
-            storeNameLabel.Location = new System.Drawing.Point(3, 6);
-            storeNameLabel.Name = "storeNameLabel";
-            storeNameLabel.Size = new System.Drawing.Size(66, 13);
-            storeNameLabel.TabIndex = 0;
-            storeNameLabel.Text = "Store Name:";
+            this.storeNameLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.storeNameLabel.AutoSize = true;
+            this.storeNameLabel.Location = new System.Drawing.Point(3, 6);
+            this.storeNameLabel.Name = "storeNameLabel";
+            this.storeNameLabel.Size = new System.Drawing.Size(66, 13);
+            this.storeNameLabel.TabIndex = 0;
+            this.storeNameLabel.Text = "Store Name:";
             // 
             // genreLabel
             // 
-            genreLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            genreLabel.AutoSize = true;
-            genreLabel.Location = new System.Drawing.Point(3, 58);
-            genreLabel.Name = "genreLabel";
-            genreLabel.Size = new System.Drawing.Size(39, 13);
-            genreLabel.TabIndex = 4;
-            genreLabel.Text = "Genre:";
+            this.genreLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.genreLabel.AutoSize = true;
+            this.genreLabel.Location = new System.Drawing.Point(3, 58);
+            this.genreLabel.Name = "genreLabel";
+            this.genreLabel.Size = new System.Drawing.Size(39, 13);
+            this.genreLabel.TabIndex = 4;
+            this.genreLabel.Text = "Genre:";
             // 
             // titleLabel
             // 
-            titleLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            titleLabel.AutoSize = true;
-            titleLabel.Location = new System.Drawing.Point(3, 32);
-            titleLabel.Name = "titleLabel";
-            titleLabel.Size = new System.Drawing.Size(30, 13);
-            titleLabel.TabIndex = 2;
-            titleLabel.Text = "Title:";
+            this.titleLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Location = new System.Drawing.Point(3, 32);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(30, 13);
+            this.titleLabel.TabIndex = 2;
+            this.titleLabel.Text = "Title:";
             // 
             // titleIDLabel
             // 
-            titleIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            titleIDLabel.AutoSize = true;
-            titleIDLabel.Location = new System.Drawing.Point(3, 6);
-            titleIDLabel.Name = "titleIDLabel";
-            titleIDLabel.Size = new System.Drawing.Size(44, 13);
-            titleIDLabel.TabIndex = 0;
-            titleIDLabel.Text = "Title ID:";
+            this.titleIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.titleIDLabel.AutoSize = true;
+            this.titleIDLabel.Location = new System.Drawing.Point(3, 6);
+            this.titleIDLabel.Name = "titleIDLabel";
+            this.titleIDLabel.Size = new System.Drawing.Size(44, 13);
+            this.titleIDLabel.TabIndex = 0;
+            this.titleIDLabel.Text = "Title ID:";
             // 
             // datePublishedLabel
             // 
-            datePublishedLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            datePublishedLabel.AutoSize = true;
-            datePublishedLabel.Location = new System.Drawing.Point(3, 6);
-            datePublishedLabel.Name = "datePublishedLabel";
-            datePublishedLabel.Size = new System.Drawing.Size(82, 13);
-            datePublishedLabel.TabIndex = 0;
-            datePublishedLabel.Text = "Date Published:";
+            this.datePublishedLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.datePublishedLabel.AutoSize = true;
+            this.datePublishedLabel.Location = new System.Drawing.Point(3, 6);
+            this.datePublishedLabel.Name = "datePublishedLabel";
+            this.datePublishedLabel.Size = new System.Drawing.Size(149, 13);
+            this.datePublishedLabel.TabIndex = 0;
+            this.datePublishedLabel.Text = "Date Published (MM/DD/YY):";
             // 
             // pubsTabControl
             // 
@@ -476,6 +473,15 @@
             this.splitContainer1.Size = new System.Drawing.Size(632, 389);
             this.splitContainer1.SplitterDistance = 210;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 194);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(235, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Double-click cell text to show titles by this author";
             // 
             // authorInclude
             // 
@@ -533,9 +539,9 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.Controls.Add(this.authorZipLabel, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(stateLabel, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(authorCityLabel, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(addressLabel, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.stateLabel, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.authorCityLabel, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.addressLabel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.authorZip, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.authorAddress, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.authorCity, 1, 1);
@@ -598,9 +604,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.phoneLabel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(au_lnameLabel, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(au_fnameLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(au_idLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.au_lnameLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.au_fnameLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.au_idLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.authorPhoneNumber, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.authorID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.authorFirstName, 1, 1);
@@ -665,7 +671,7 @@
             this.authorSubmit.TabIndex = 6;
             this.authorSubmit.Text = "Search";
             this.authorSubmit.UseVisualStyleBackColor = true;
-            this.authorSubmit.Click += new System.EventHandler(this.button1_Click);
+            this.authorSubmit.Click += new System.EventHandler(this.authorSubmit_Click);
             // 
             // dataGridView1
             // 
@@ -675,21 +681,22 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.auidDataGridViewTextBoxColumn,
-            this.aulnameDataGridViewTextBoxColumn,
-            this.aufnameDataGridViewTextBoxColumn,
+            this.lastnameDataGridViewTextBoxColumn,
+            this.firstnameDataGridViewTextBoxColumn,
             this.phoneDataGridViewTextBoxColumn,
             this.addressDataGridViewTextBoxColumn,
             this.cityDataGridViewTextBoxColumn,
             this.stateDataGridViewTextBoxColumn,
             this.zipDataGridViewTextBoxColumn,
             this.contractDataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.authorsBindingSource;
+            this.dataGridView1.DataSource = this.aUTHORBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(626, 169);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // auidDataGridViewTextBoxColumn
             // 
@@ -698,19 +705,19 @@
             this.auidDataGridViewTextBoxColumn.Name = "auidDataGridViewTextBoxColumn";
             this.auidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // aulnameDataGridViewTextBoxColumn
+            // lastnameDataGridViewTextBoxColumn
             // 
-            this.aulnameDataGridViewTextBoxColumn.DataPropertyName = "au_lname";
-            this.aulnameDataGridViewTextBoxColumn.HeaderText = "au_lname";
-            this.aulnameDataGridViewTextBoxColumn.Name = "aulnameDataGridViewTextBoxColumn";
-            this.aulnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastnameDataGridViewTextBoxColumn.DataPropertyName = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.HeaderText = "last_name";
+            this.lastnameDataGridViewTextBoxColumn.Name = "lastnameDataGridViewTextBoxColumn";
+            this.lastnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // aufnameDataGridViewTextBoxColumn
+            // firstnameDataGridViewTextBoxColumn
             // 
-            this.aufnameDataGridViewTextBoxColumn.DataPropertyName = "au_fname";
-            this.aufnameDataGridViewTextBoxColumn.HeaderText = "au_fname";
-            this.aufnameDataGridViewTextBoxColumn.Name = "aufnameDataGridViewTextBoxColumn";
-            this.aufnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.firstnameDataGridViewTextBoxColumn.DataPropertyName = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.HeaderText = "first_name";
+            this.firstnameDataGridViewTextBoxColumn.Name = "firstnameDataGridViewTextBoxColumn";
+            this.firstnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
@@ -754,15 +761,20 @@
             this.contractDataGridViewCheckBoxColumn.Name = "contractDataGridViewCheckBoxColumn";
             this.contractDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
-            // authorsBindingSource
+            // aUTHORBindingSource
             // 
-            this.authorsBindingSource.DataMember = "authors";
-            this.authorsBindingSource.DataSource = this.pubsDataSet;
+            this.aUTHORBindingSource.DataMember = "AUTHOR";
+            this.aUTHORBindingSource.DataSource = this.pubsDataSet1BindingSource;
             // 
-            // pubsDataSet
+            // pubsDataSet1BindingSource
             // 
-            this.pubsDataSet.DataSetName = "pubsDataSet";
-            this.pubsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.pubsDataSet1BindingSource.DataSource = this.pubsDataSet1;
+            this.pubsDataSet1BindingSource.Position = 0;
+            // 
+            // pubsDataSet1
+            // 
+            this.pubsDataSet1.DataSetName = "pubsDataSet1";
+            this.pubsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // publishersTab
             // 
@@ -843,8 +855,8 @@
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.Controls.Add(pubCountryLabel, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(pubStateLabel, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.pubCountryLabel, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.pubStateLabel, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.pubState, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.pubCountry, 1, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(226, 3);
@@ -876,9 +888,9 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel3.Controls.Add(pubCityLabel, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(pubIDLabel, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(pubNameLabel, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pubCityLabel, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.pubIDLabel, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.pubNameLabel, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.pubName, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.pubID, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.pubCity, 1, 2);
@@ -918,78 +930,88 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.publisher_name,
             this.pubidDataGridViewTextBoxColumn,
-            this.pubnameDataGridViewTextBoxColumn,
             this.cityDataGridViewTextBoxColumn1,
             this.stateDataGridViewTextBoxColumn1,
             this.countryDataGridViewTextBoxColumn,
             this.logo,
-            this.pr_info});
-            this.dataGridView2.DataSource = this.publisherinfoBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle1;
+            this.public_relationship_info});
+            this.dataGridView2.DataSource = this.pUBLISHERBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 45;
             this.dataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView2.Size = new System.Drawing.Size(626, 169);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // publisher_name
+            // 
+            this.publisher_name.DataPropertyName = "publisher_name";
+            this.publisher_name.HeaderText = "publisher_name";
+            this.publisher_name.Name = "publisher_name";
+            this.publisher_name.ReadOnly = true;
             // 
             // pubidDataGridViewTextBoxColumn
             // 
             this.pubidDataGridViewTextBoxColumn.DataPropertyName = "pub_id";
             this.pubidDataGridViewTextBoxColumn.HeaderText = "pub_id";
             this.pubidDataGridViewTextBoxColumn.Name = "pubidDataGridViewTextBoxColumn";
-            // 
-            // pubnameDataGridViewTextBoxColumn
-            // 
-            this.pubnameDataGridViewTextBoxColumn.DataPropertyName = "pub_name";
-            this.pubnameDataGridViewTextBoxColumn.HeaderText = "pub_name";
-            this.pubnameDataGridViewTextBoxColumn.Name = "pubnameDataGridViewTextBoxColumn";
+            this.pubidDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cityDataGridViewTextBoxColumn1
             // 
             this.cityDataGridViewTextBoxColumn1.DataPropertyName = "city";
             this.cityDataGridViewTextBoxColumn1.HeaderText = "city";
             this.cityDataGridViewTextBoxColumn1.Name = "cityDataGridViewTextBoxColumn1";
+            this.cityDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // stateDataGridViewTextBoxColumn1
             // 
             this.stateDataGridViewTextBoxColumn1.DataPropertyName = "state";
             this.stateDataGridViewTextBoxColumn1.HeaderText = "state";
             this.stateDataGridViewTextBoxColumn1.Name = "stateDataGridViewTextBoxColumn1";
+            this.stateDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // countryDataGridViewTextBoxColumn
             // 
             this.countryDataGridViewTextBoxColumn.DataPropertyName = "country";
             this.countryDataGridViewTextBoxColumn.HeaderText = "country";
             this.countryDataGridViewTextBoxColumn.Name = "countryDataGridViewTextBoxColumn";
+            this.countryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // logo
             // 
             this.logo.DataPropertyName = "logo";
             this.logo.HeaderText = "logo";
             this.logo.Name = "logo";
+            this.logo.ReadOnly = true;
             // 
-            // pr_info
+            // public_relationship_info
             // 
-            this.pr_info.DataPropertyName = "pr_info";
-            this.pr_info.HeaderText = "pr_info";
-            this.pr_info.Name = "pr_info";
+            this.public_relationship_info.DataPropertyName = "public_relationship_info";
+            this.public_relationship_info.HeaderText = "public_relationship_info";
+            this.public_relationship_info.Name = "public_relationship_info";
+            this.public_relationship_info.ReadOnly = true;
             // 
-            // publisherinfoBindingSource
+            // pUBLISHERBindingSource
             // 
-            this.publisherinfoBindingSource.DataMember = "publisherinfo";
-            this.publisherinfoBindingSource.DataSource = this.pubsDataSet;
+            this.pUBLISHERBindingSource.DataMember = "PUBLISHER";
+            this.pUBLISHERBindingSource.DataSource = this.pubsDataSet1BindingSource;
             // 
             // storesTab
             // 
@@ -1011,6 +1033,8 @@
             // 
             // splitContainer3.Panel1
             // 
+            this.splitContainer3.Panel1.Controls.Add(this.storePromotion);
+            this.splitContainer3.Panel1.Controls.Add(this.storePromotionLabel);
             this.splitContainer3.Panel1.Controls.Add(this.storeClear);
             this.splitContainer3.Panel1.Controls.Add(this.storeDelete);
             this.splitContainer3.Panel1.Controls.Add(this.storeAdd);
@@ -1070,8 +1094,8 @@
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel5.Controls.Add(storeStateLabel, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(stoerCityLabel, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.storeStateLabel, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.stoerCityLabel, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.storeCity, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.storeState, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.storeZipCode, 1, 2);
@@ -1121,9 +1145,9 @@
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel6.Controls.Add(storeAddressLabel, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(storeIDLabel, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(storeNameLabel, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.storeAddressLabel, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.storeIDLabel, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.storeNameLabel, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.storeName, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.storeID, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.storeAddress, 1, 2);
@@ -1160,61 +1184,29 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.store_name,
             this.storidDataGridViewTextBoxColumn,
-            this.stornameDataGridViewTextBoxColumn,
-            this.storaddressDataGridViewTextBoxColumn,
+            this.store_address,
             this.cityDataGridViewTextBoxColumn2,
             this.stateDataGridViewTextBoxColumn2,
-            this.zipDataGridViewTextBoxColumn1});
-            this.dataGridView3.DataSource = this.storesBindingSource;
+            this.zipDataGridViewTextBoxColumn1,
+            this.promotion_id});
+            this.dataGridView3.DataSource = this.sTOREBindingSource;
             this.dataGridView3.Location = new System.Drawing.Point(3, 4);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
             this.dataGridView3.Size = new System.Drawing.Size(626, 168);
             this.dataGridView3.TabIndex = 0;
             // 
-            // storidDataGridViewTextBoxColumn
+            // sTOREBindingSource
             // 
-            this.storidDataGridViewTextBoxColumn.DataPropertyName = "stor_id";
-            this.storidDataGridViewTextBoxColumn.HeaderText = "stor_id";
-            this.storidDataGridViewTextBoxColumn.Name = "storidDataGridViewTextBoxColumn";
-            // 
-            // stornameDataGridViewTextBoxColumn
-            // 
-            this.stornameDataGridViewTextBoxColumn.DataPropertyName = "stor_name";
-            this.stornameDataGridViewTextBoxColumn.HeaderText = "stor_name";
-            this.stornameDataGridViewTextBoxColumn.Name = "stornameDataGridViewTextBoxColumn";
-            // 
-            // storaddressDataGridViewTextBoxColumn
-            // 
-            this.storaddressDataGridViewTextBoxColumn.DataPropertyName = "stor_address";
-            this.storaddressDataGridViewTextBoxColumn.HeaderText = "stor_address";
-            this.storaddressDataGridViewTextBoxColumn.Name = "storaddressDataGridViewTextBoxColumn";
-            // 
-            // cityDataGridViewTextBoxColumn2
-            // 
-            this.cityDataGridViewTextBoxColumn2.DataPropertyName = "city";
-            this.cityDataGridViewTextBoxColumn2.HeaderText = "city";
-            this.cityDataGridViewTextBoxColumn2.Name = "cityDataGridViewTextBoxColumn2";
-            // 
-            // stateDataGridViewTextBoxColumn2
-            // 
-            this.stateDataGridViewTextBoxColumn2.DataPropertyName = "state";
-            this.stateDataGridViewTextBoxColumn2.HeaderText = "state";
-            this.stateDataGridViewTextBoxColumn2.Name = "stateDataGridViewTextBoxColumn2";
-            // 
-            // zipDataGridViewTextBoxColumn1
-            // 
-            this.zipDataGridViewTextBoxColumn1.DataPropertyName = "zip";
-            this.zipDataGridViewTextBoxColumn1.HeaderText = "zip";
-            this.zipDataGridViewTextBoxColumn1.Name = "zipDataGridViewTextBoxColumn1";
-            // 
-            // storesBindingSource
-            // 
-            this.storesBindingSource.DataMember = "stores";
-            this.storesBindingSource.DataSource = this.pubsDataSet;
+            this.sTOREBindingSource.DataMember = "STORE";
+            this.sTOREBindingSource.DataSource = this.pubsDataSet1BindingSource;
             // 
             // titlesTab
             // 
@@ -1236,7 +1228,6 @@
             // 
             // splitContainer4.Panel1
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.titleView);
             this.splitContainer4.Panel1.Controls.Add(this.titleClear);
             this.splitContainer4.Panel1.Controls.Add(this.titleDelete);
             this.splitContainer4.Panel1.Controls.Add(this.titleAdd);
@@ -1251,15 +1242,6 @@
             this.splitContainer4.SplitterDistance = 210;
             this.splitContainer4.TabIndex = 0;
             // 
-            // titleView
-            // 
-            this.titleView.Location = new System.Drawing.Point(172, 140);
-            this.titleView.Name = "titleView";
-            this.titleView.Size = new System.Drawing.Size(75, 23);
-            this.titleView.TabIndex = 19;
-            this.titleView.Text = "View";
-            this.titleView.UseVisualStyleBackColor = true;
-            // 
             // titleClear
             // 
             this.titleClear.Location = new System.Drawing.Point(366, 140);
@@ -1272,7 +1254,7 @@
             // 
             // titleDelete
             // 
-            this.titleDelete.Location = new System.Drawing.Point(253, 140);
+            this.titleDelete.Location = new System.Drawing.Point(172, 140);
             this.titleDelete.Name = "titleDelete";
             this.titleDelete.Size = new System.Drawing.Size(75, 23);
             this.titleDelete.TabIndex = 17;
@@ -1305,22 +1287,21 @@
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel7.Controls.Add(datePublishedLabel, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.datePublishedLabel, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.datePublished, 1, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(227, 3);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(214, 23);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(281, 23);
             this.tableLayoutPanel7.TabIndex = 14;
             // 
             // datePublished
             // 
-            this.datePublished.Location = new System.Drawing.Point(91, 3);
+            this.datePublished.Location = new System.Drawing.Point(158, 3);
             this.datePublished.Name = "datePublished";
             this.datePublished.Size = new System.Drawing.Size(100, 20);
             this.datePublished.TabIndex = 10;
-            this.datePublished.Text = "MM/DD/YY";
             // 
             // tableLayoutPanel8
             // 
@@ -1328,9 +1309,9 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel8.Controls.Add(this.titlePubIDLabel, 0, 3);
-            this.tableLayoutPanel8.Controls.Add(genreLabel, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(titleLabel, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(titleIDLabel, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.genreLabel, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.titleLabel, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.titleIDLabel, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.titleID, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.title, 1, 1);
             this.tableLayoutPanel8.Controls.Add(this.genre, 1, 2);
@@ -1385,89 +1366,33 @@
             // 
             // dataGridView4
             // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.AutoGenerateColumns = false;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.titleidDataGridViewTextBoxColumn,
-            this.titleDataGridViewTextBoxColumn,
             this.typeDataGridViewTextBoxColumn,
             this.pubidDataGridViewTextBoxColumn1,
             this.priceDataGridViewTextBoxColumn,
+            this.publication_date,
             this.advanceDataGridViewTextBoxColumn,
             this.royaltyDataGridViewTextBoxColumn,
             this.ytdsalesDataGridViewTextBoxColumn,
-            this.notesDataGridViewTextBoxColumn,
-            this.pubdateDataGridViewTextBoxColumn});
-            this.dataGridView4.DataSource = this.titlesBindingSource;
+            this.notesDataGridViewTextBoxColumn});
+            this.dataGridView4.DataSource = this.tITLEBindingSource;
             this.dataGridView4.Location = new System.Drawing.Point(3, 4);
             this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
             this.dataGridView4.Size = new System.Drawing.Size(626, 168);
             this.dataGridView4.TabIndex = 0;
+            this.dataGridView4.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentDoubleClick);
+            this.dataGridView4.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentDoubleClick);
             // 
-            // titleidDataGridViewTextBoxColumn
+            // tITLEBindingSource
             // 
-            this.titleidDataGridViewTextBoxColumn.DataPropertyName = "title_id";
-            this.titleidDataGridViewTextBoxColumn.HeaderText = "title_id";
-            this.titleidDataGridViewTextBoxColumn.Name = "titleidDataGridViewTextBoxColumn";
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "title";
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "type";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            // 
-            // pubidDataGridViewTextBoxColumn1
-            // 
-            this.pubidDataGridViewTextBoxColumn1.DataPropertyName = "pub_id";
-            this.pubidDataGridViewTextBoxColumn1.HeaderText = "pub_id";
-            this.pubidDataGridViewTextBoxColumn1.Name = "pubidDataGridViewTextBoxColumn1";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // advanceDataGridViewTextBoxColumn
-            // 
-            this.advanceDataGridViewTextBoxColumn.DataPropertyName = "advance";
-            this.advanceDataGridViewTextBoxColumn.HeaderText = "advance";
-            this.advanceDataGridViewTextBoxColumn.Name = "advanceDataGridViewTextBoxColumn";
-            // 
-            // royaltyDataGridViewTextBoxColumn
-            // 
-            this.royaltyDataGridViewTextBoxColumn.DataPropertyName = "royalty";
-            this.royaltyDataGridViewTextBoxColumn.HeaderText = "royalty";
-            this.royaltyDataGridViewTextBoxColumn.Name = "royaltyDataGridViewTextBoxColumn";
-            // 
-            // ytdsalesDataGridViewTextBoxColumn
-            // 
-            this.ytdsalesDataGridViewTextBoxColumn.DataPropertyName = "ytd_sales";
-            this.ytdsalesDataGridViewTextBoxColumn.HeaderText = "ytd_sales";
-            this.ytdsalesDataGridViewTextBoxColumn.Name = "ytdsalesDataGridViewTextBoxColumn";
-            // 
-            // notesDataGridViewTextBoxColumn
-            // 
-            this.notesDataGridViewTextBoxColumn.DataPropertyName = "notes";
-            this.notesDataGridViewTextBoxColumn.HeaderText = "notes";
-            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
-            // 
-            // pubdateDataGridViewTextBoxColumn
-            // 
-            this.pubdateDataGridViewTextBoxColumn.DataPropertyName = "pubdate";
-            this.pubdateDataGridViewTextBoxColumn.HeaderText = "pubdate";
-            this.pubdateDataGridViewTextBoxColumn.Name = "pubdateDataGridViewTextBoxColumn";
-            // 
-            // titlesBindingSource
-            // 
-            this.titlesBindingSource.DataMember = "titles";
-            this.titlesBindingSource.DataSource = this.pubsDataSet;
+            this.tITLEBindingSource.DataMember = "TITLE";
+            this.tITLEBindingSource.DataSource = this.pubsDataSet1BindingSource;
             // 
             // searchTab
             // 
@@ -1490,12 +1415,38 @@
             this.splitContainer5.SplitterDistance = 210;
             this.splitContainer5.TabIndex = 0;
             // 
+            // authorsBindingSource
+            // 
+            this.authorsBindingSource.DataMember = "authors";
+            this.authorsBindingSource.DataSource = this.pubsDataSet;
+            // 
+            // pubsDataSet
+            // 
+            this.pubsDataSet.DataSetName = "pubsDataSet";
+            this.pubsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // publisherinfoBindingSource
+            // 
+            this.publisherinfoBindingSource.DataMember = "publisherinfo";
+            this.publisherinfoBindingSource.DataSource = this.pubsDataSet;
+            // 
+            // storesBindingSource
+            // 
+            this.storesBindingSource.DataMember = "stores";
+            this.storesBindingSource.DataSource = this.pubsDataSet;
+            // 
+            // titlesBindingSource
+            // 
+            this.titlesBindingSource.DataMember = "titles";
+            this.titlesBindingSource.DataSource = this.pubsDataSet;
+            // 
             // authorsTableAdapter
             // 
             this.authorsTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.AuthorInfoTableAdapter = null;
             this.tableAdapterManager.authorsTableAdapter = this.authorsTableAdapter;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.discountsTableAdapter = null;
@@ -1522,14 +1473,149 @@
             // 
             this.titlesTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // aUTHORTableAdapter
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 194);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Double-click cell text to show titles by this author";
+            this.aUTHORTableAdapter.ClearBeforeFill = true;
+            // 
+            // pUBLISHERTableAdapter
+            // 
+            this.pUBLISHERTableAdapter.ClearBeforeFill = true;
+            // 
+            // sTORETableAdapter
+            // 
+            this.sTORETableAdapter.ClearBeforeFill = true;
+            // 
+            // tITLETableAdapter
+            // 
+            this.tITLETableAdapter.ClearBeforeFill = true;
+            // 
+            // storePromotionLabel
+            // 
+            this.storePromotionLabel.AutoSize = true;
+            this.storePromotionLabel.Location = new System.Drawing.Point(448, 9);
+            this.storePromotionLabel.Name = "storePromotionLabel";
+            this.storePromotionLabel.Size = new System.Drawing.Size(71, 13);
+            this.storePromotionLabel.TabIndex = 17;
+            this.storePromotionLabel.Text = "Promotion ID:";
+            // 
+            // storePromotion
+            // 
+            this.storePromotion.Location = new System.Drawing.Point(526, 6);
+            this.storePromotion.Name = "storePromotion";
+            this.storePromotion.Size = new System.Drawing.Size(100, 20);
+            this.storePromotion.TabIndex = 18;
+            // 
+            // store_name
+            // 
+            this.store_name.DataPropertyName = "store_name";
+            this.store_name.HeaderText = "store_name";
+            this.store_name.Name = "store_name";
+            this.store_name.ReadOnly = true;
+            // 
+            // storidDataGridViewTextBoxColumn
+            // 
+            this.storidDataGridViewTextBoxColumn.DataPropertyName = "stor_id";
+            this.storidDataGridViewTextBoxColumn.HeaderText = "stor_id";
+            this.storidDataGridViewTextBoxColumn.Name = "storidDataGridViewTextBoxColumn";
+            this.storidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // store_address
+            // 
+            this.store_address.DataPropertyName = "store_address";
+            this.store_address.HeaderText = "store_address";
+            this.store_address.Name = "store_address";
+            this.store_address.ReadOnly = true;
+            // 
+            // cityDataGridViewTextBoxColumn2
+            // 
+            this.cityDataGridViewTextBoxColumn2.DataPropertyName = "city";
+            this.cityDataGridViewTextBoxColumn2.HeaderText = "city";
+            this.cityDataGridViewTextBoxColumn2.Name = "cityDataGridViewTextBoxColumn2";
+            this.cityDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // stateDataGridViewTextBoxColumn2
+            // 
+            this.stateDataGridViewTextBoxColumn2.DataPropertyName = "state";
+            this.stateDataGridViewTextBoxColumn2.HeaderText = "state";
+            this.stateDataGridViewTextBoxColumn2.Name = "stateDataGridViewTextBoxColumn2";
+            this.stateDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // zipDataGridViewTextBoxColumn1
+            // 
+            this.zipDataGridViewTextBoxColumn1.DataPropertyName = "zip";
+            this.zipDataGridViewTextBoxColumn1.HeaderText = "zip";
+            this.zipDataGridViewTextBoxColumn1.Name = "zipDataGridViewTextBoxColumn1";
+            this.zipDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // promotion_id
+            // 
+            this.promotion_id.DataPropertyName = "promotion_id";
+            this.promotion_id.HeaderText = "promotion_id";
+            this.promotion_id.Name = "promotion_id";
+            this.promotion_id.ReadOnly = true;
+            // 
+            // titleidDataGridViewTextBoxColumn
+            // 
+            this.titleidDataGridViewTextBoxColumn.DataPropertyName = "title_id";
+            this.titleidDataGridViewTextBoxColumn.HeaderText = "title_id";
+            this.titleidDataGridViewTextBoxColumn.Name = "titleidDataGridViewTextBoxColumn";
+            this.titleidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "type";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pubidDataGridViewTextBoxColumn1
+            // 
+            this.pubidDataGridViewTextBoxColumn1.DataPropertyName = "pub_id";
+            this.pubidDataGridViewTextBoxColumn1.HeaderText = "pub_id";
+            this.pubidDataGridViewTextBoxColumn1.Name = "pubidDataGridViewTextBoxColumn1";
+            this.pubidDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // publication_date
+            // 
+            this.publication_date.DataPropertyName = "publication_date";
+            this.publication_date.HeaderText = "publication_date";
+            this.publication_date.Name = "publication_date";
+            this.publication_date.ReadOnly = true;
+            // 
+            // advanceDataGridViewTextBoxColumn
+            // 
+            this.advanceDataGridViewTextBoxColumn.DataPropertyName = "advance";
+            this.advanceDataGridViewTextBoxColumn.HeaderText = "advance";
+            this.advanceDataGridViewTextBoxColumn.Name = "advanceDataGridViewTextBoxColumn";
+            this.advanceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // royaltyDataGridViewTextBoxColumn
+            // 
+            this.royaltyDataGridViewTextBoxColumn.DataPropertyName = "royalty";
+            this.royaltyDataGridViewTextBoxColumn.HeaderText = "royalty";
+            this.royaltyDataGridViewTextBoxColumn.Name = "royaltyDataGridViewTextBoxColumn";
+            this.royaltyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ytdsalesDataGridViewTextBoxColumn
+            // 
+            this.ytdsalesDataGridViewTextBoxColumn.DataPropertyName = "ytd_sales";
+            this.ytdsalesDataGridViewTextBoxColumn.HeaderText = "ytd_sales";
+            this.ytdsalesDataGridViewTextBoxColumn.Name = "ytdsalesDataGridViewTextBoxColumn";
+            this.ytdsalesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // notesDataGridViewTextBoxColumn
+            // 
+            this.notesDataGridViewTextBoxColumn.DataPropertyName = "notes";
+            this.notesDataGridViewTextBoxColumn.HeaderText = "notes";
+            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
+            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
@@ -1552,8 +1638,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aUTHORBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet1)).EndInit();
             this.publishersTab.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
@@ -1564,9 +1651,10 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.publisherinfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pUBLISHERBindingSource)).EndInit();
             this.storesTab.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
@@ -1575,7 +1663,7 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTOREBindingSource)).EndInit();
             this.titlesTab.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel2.ResumeLayout(false);
@@ -1586,10 +1674,15 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.titlesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tITLEBindingSource)).EndInit();
             this.searchTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.authorsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pubsDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.publisherinfoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.titlesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1615,15 +1708,6 @@
         private System.Windows.Forms.BindingSource publisherinfoBindingSource;
         private System.Windows.Forms.Button authorSubmit;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn auidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aulnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn aufnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zipDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn contractDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label authorZipLabel;
@@ -1658,12 +1742,6 @@
         private System.Windows.Forms.TextBox storeName;
         private System.Windows.Forms.TextBox storeID;
         private System.Windows.Forms.TextBox storeAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn storidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stornameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn storaddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn zipDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.BindingSource titlesBindingSource;
         private pubsDataSetTableAdapters.titlesTableAdapter titlesTableAdapter;
@@ -1675,16 +1753,6 @@
         private System.Windows.Forms.TextBox title;
         private System.Windows.Forms.TextBox genre;
         private System.Windows.Forms.TextBox titlePubID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titleidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pubidDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn advanceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn royaltyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ytdsalesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pubdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button titleSubmit;
         private System.Windows.Forms.Button addAuthor;
         private System.Windows.Forms.CheckBox contractCheckbox;
@@ -1700,15 +1768,71 @@
         private System.Windows.Forms.Button storeClear;
         private System.Windows.Forms.Button titleClear;
         private System.Windows.Forms.CheckBox authorInclude;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label au_idLabel;
+        private System.Windows.Forms.Label au_fnameLabel;
+        private System.Windows.Forms.Label au_lnameLabel;
+        private System.Windows.Forms.Label stateLabel;
+        private System.Windows.Forms.Label authorCityLabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label pubCityLabel;
+        private System.Windows.Forms.Label pubIDLabel;
+        private System.Windows.Forms.Label pubNameLabel;
+        private System.Windows.Forms.Label pubCountryLabel;
+        private System.Windows.Forms.Label pubStateLabel;
+        private System.Windows.Forms.Label storeStateLabel;
+        private System.Windows.Forms.Label stoerCityLabel;
+        private System.Windows.Forms.Label storeAddressLabel;
+        private System.Windows.Forms.Label storeIDLabel;
+        private System.Windows.Forms.Label storeNameLabel;
+        private System.Windows.Forms.Label genreLabel;
+        private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Label titleIDLabel;
+        private System.Windows.Forms.Label datePublishedLabel;
+        private System.Windows.Forms.BindingSource pubsDataSet1BindingSource;
+        private pubsDataSet1 pubsDataSet1;
+        private System.Windows.Forms.BindingSource aUTHORBindingSource;
+        private pubsDataSet1TableAdapters.AUTHORTableAdapter aUTHORTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn auidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zipDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn contractDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.BindingSource pUBLISHERBindingSource;
+        private pubsDataSet1TableAdapters.PUBLISHERTableAdapter pUBLISHERTableAdapter;
+        private System.Windows.Forms.BindingSource sTOREBindingSource;
+        private pubsDataSet1TableAdapters.STORETableAdapter sTORETableAdapter;
+        private System.Windows.Forms.BindingSource tITLEBindingSource;
+        private pubsDataSet1TableAdapters.TITLETableAdapter tITLETableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn publisher_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn pubidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pubnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn countryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn logo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pr_info;
-        private System.Windows.Forms.Button titleView;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn public_relationship_info;
+        private System.Windows.Forms.TextBox storePromotion;
+        private System.Windows.Forms.Label storePromotionLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn store_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn storidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn store_address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn zipDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn promotion_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pubidDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn publication_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn advanceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn royaltyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ytdsalesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
     }
 }
 
